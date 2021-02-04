@@ -1,0 +1,138 @@
+
+Showing logs for build [32mdishadudhal8-java-web-app-with-s7glk-2[0m stage [32mfrom-build-pack[0m and container [32mcredential-initializer[0m
+{"level":"info","ts":1612425094.9085834,"caller":"creds-init/main.go:44","msg":"Credentials initialized."}
+
+Showing logs for build [32mdishadudhal8-java-web-app-with-s7glk-2[0m stage [32mfrom-build-pack[0m and container [32mworking-dir-initializer[0m
+
+Showing logs for build [32mdishadudhal8-java-web-app-with-s7glk-2[0m stage [32mfrom-build-pack[0m and container [32mplace-tools[0m
+
+Showing logs for build [32mdishadudhal8-java-web-app-with-s7glk-2[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-dishadudhal8-java-web-app-with-s7glk-ft7nd[0m
+{"level":"info","ts":1612425105.3284254,"caller":"git/git.go:105","msg":"Successfully cloned https://github.com/DishaDudhal8/java-web-app-with-embedded-tomcat.git @ v1.0.1 in path /workspace/source"}
+{"level":"warn","ts":1612425105.328506,"caller":"git/git.go:152","msg":"Unexpected error: creating symlink: symlink /tekton/home/.ssh /root/.ssh: file exists"}
+{"level":"info","ts":1612425105.363181,"caller":"git/git.go:133","msg":"Successfully initialized and updated submodules in path /workspace/source"}
+
+Showing logs for build [32mdishadudhal8-java-web-app-with-s7glk-2[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-builder-home[0m
+
+Showing logs for build [32mdishadudhal8-java-web-app-with-s7glk-2[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:cf099ff853bb7a12a4ddda2144f7d97755738697
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mdishadudhal8-java-web-app-with-s7glk-2[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32mdishadudhal8-java-web-app-with-s7glk-2[0m stage [32mfrom-build-pack[0m and container [32mstep-build-mvn-deploy[0m
+Picked up _JAVA_OPTIONS: -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap -Dsun.zip.disableMemoryMapping=true -XX:+UseParallelGC -XX:MinHeapFreeRatio=5 -XX:MaxHeapFreeRatio=10 -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Xms10m -Xmx192m
+OpenJDK 64-Bit Server VM warning: If the number of processors is expected to increase from one, then you should configure the number of parallel GC threads appropriately using -XX:ParallelGCThreads=N
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----< io.github.julianjupiter:java-web-app-with-embedded-tomcat >------
+[INFO] Building java-web-app-with-embedded-tomcat 1.0.1
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ java-web-app-with-embedded-tomcat ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ java-web-app-with-embedded-tomcat ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 15 resources to META-INF/resources
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ java-web-app-with-embedded-tomcat ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 12 source files to /workspace/source/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ java-web-app-with-embedded-tomcat ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /workspace/source/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ java-web-app-with-embedded-tomcat ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:3.0.0-M1:test (default-test) @ java-web-app-with-embedded-tomcat ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ java-web-app-with-embedded-tomcat ---
+[INFO] Building jar: /workspace/source/target/java-web-app-with-embedded-tomcat-1.0.1.jar
+[INFO] 
+[INFO] --- maven-shade-plugin:3.2.4:shade (default) @ java-web-app-with-embedded-tomcat ---
+[INFO] Including org.apache.tomcat.embed:tomcat-embed-core:jar:9.0.36 in the shaded jar.
+[INFO] Including org.apache.tomcat:tomcat-annotations-api:jar:9.0.36 in the shaded jar.
+[INFO] Including org.apache.tomcat.embed:tomcat-embed-jasper:jar:9.0.36 in the shaded jar.
+[INFO] Including org.apache.tomcat.embed:tomcat-embed-el:jar:9.0.36 in the shaded jar.
+[INFO] Including org.eclipse.jdt:ecj:jar:3.18.0 in the shaded jar.
+[INFO] Including javax.servlet:jstl:jar:1.2 in the shaded jar.
+[INFO] Including jakarta.json.bind:jakarta.json.bind-api:jar:1.0.2 in the shaded jar.
+[INFO] Including org.eclipse:yasson:jar:1.0.7 in the shaded jar.
+[INFO] Including jakarta.json:jakarta.json-api:jar:1.1.6 in the shaded jar.
+[INFO] Including org.glassfish:jakarta.json:jar:module:1.1.6 in the shaded jar.
+[INFO] Including org.glassfish:jakarta.json:jar:1.1.6 in the shaded jar.
+[INFO] Including org.slf4j:slf4j-log4j12:jar:1.7.30 in the shaded jar.
+[INFO] Including org.slf4j:slf4j-api:jar:1.7.30 in the shaded jar.
+[INFO] Including log4j:log4j:jar:1.2.17 in the shaded jar.
+[INFO] Including org.slf4j:jcl-over-slf4j:jar:1.7.30 in the shaded jar.
+[WARNING] Discovered module-info.class. Shading will break its strong encapsulation.
+[WARNING] Discovered module-info.class. Shading will break its strong encapsulation.
+[WARNING] Discovered module-info.class. Shading will break its strong encapsulation.
+[WARNING] Discovered module-info.class. Shading will break its strong encapsulation.
+[WARNING] ecj-3.18.0.jar, jakarta.json-1.1.6-module.jar, jakarta.json-1.1.6.jar, jakarta.json-api-1.1.6.jar, jakarta.json.bind-api-1.0.2.jar, java-web-app-with-embedded-tomcat-1.0.1.jar, jcl-over-slf4j-1.7.30.jar, jstl-1.2.jar, log4j-1.2.17.jar, slf4j-api-1.7.30.jar, slf4j-log4j12-1.7.30.jar, tomcat-annotations-api-9.0.36.jar, tomcat-embed-core-9.0.36.jar, tomcat-embed-el-9.0.36.jar, tomcat-embed-jasper-9.0.36.jar, yasson-1.0.7.jar define 1 overlapping resource: 
+[WARNING]   - META-INF/MANIFEST.MF
+[WARNING] log4j-1.2.17.jar, tomcat-annotations-api-9.0.36.jar, tomcat-embed-core-9.0.36.jar, tomcat-embed-el-9.0.36.jar, tomcat-embed-jasper-9.0.36.jar define 2 overlapping resources: 
+[WARNING]   - META-INF/LICENSE
+[WARNING]   - META-INF/NOTICE
+[WARNING] jakarta.json-1.1.6-module.jar, jakarta.json-1.1.6.jar, jakarta.json-api-1.1.6.jar, jakarta.json.bind-api-1.0.2.jar, yasson-1.0.7.jar define 2 overlapping resources: 
+[WARNING]   - META-INF/LICENSE.md
+[WARNING]   - META-INF/NOTICE.md
+[WARNING] jakarta.json-1.1.6.jar, jakarta.json-api-1.1.6.jar define 34 overlapping classes: 
+[WARNING]   - javax.json.EmptyArray
+[WARNING]   - javax.json.EmptyObject
+[WARNING]   - javax.json.Json
+[WARNING]   - javax.json.JsonArray
+[WARNING]   - javax.json.JsonArrayBuilder
+[WARNING]   - javax.json.JsonBuilderFactory
+[WARNING]   - javax.json.JsonException
+[WARNING]   - javax.json.JsonMergePatch
+[WARNING]   - javax.json.JsonNumber
+[WARNING]   - javax.json.JsonObject
+[WARNING]   - 24 more...
+[WARNING] jakarta.json-1.1.6-module.jar, jakarta.json-1.1.6.jar define 63 overlapping classes and resources: 
+[WARNING]   - META-INF/maven/org.glassfish/jakarta.json/pom.properties
+[WARNING]   - META-INF/maven/org.glassfish/jakarta.json/pom.xml
+[WARNING]   - org.glassfish.json.BufferPoolImpl
+[WARNING]   - org.glassfish.json.JsonArrayBuilderImpl
+[WARNING]   - org.glassfish.json.JsonArrayBuilderImpl$JsonArrayImpl
+[WARNING]   - org.glassfish.json.JsonBuilderFactoryImpl
+[WARNING]   - org.glassfish.json.JsonGeneratorFactoryImpl
+[WARNING]   - org.glassfish.json.JsonGeneratorImpl
+[WARNING]   - org.glassfish.json.JsonGeneratorImpl$1
+[WARNING]   - org.glassfish.json.JsonGeneratorImpl$Context
+[WARNING]   - 53 more...
+[WARNING] maven-shade-plugin has detected that some class files are
+[WARNING] present in two or more JARs. When this happens, only one
+[WARNING] single version of the class is copied to the uber jar.
+[WARNING] Usually this is not harmful and you can skip these warnings,
+[WARNING] otherwise try to manually exclude artifacts based on
+[WARNING] mvn dependency:tree -Ddetail=true and the above output.
+[WARNING] See http://maven.apache.org/plugins/maven-shade-plugin/
+[INFO] Replacing original artifact with shaded artifact.
+[INFO] Replacing /workspace/source/target/java-web-app-with-embedded-tomcat-1.0.1.jar with /workspace/source/target/java-web-app-with-embedded-tomcat-1.0.1-shaded.jar
+[INFO] 
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ java-web-app-with-embedded-tomcat ---
+[INFO] Installing /workspace/source/target/java-web-app-with-embedded-tomcat-1.0.1.jar to /home/jenkins/.mvnrepository/io/github/julianjupiter/java-web-app-with-embedded-tomcat/1.0.1/java-web-app-with-embedded-tomcat-1.0.1.jar
+[INFO] Installing /workspace/source/pom.xml to /home/jenkins/.mvnrepository/io/github/julianjupiter/java-web-app-with-embedded-tomcat/1.0.1/java-web-app-with-embedded-tomcat-1.0.1.pom
+[INFO] 
+[INFO] --- maven-deploy-plugin:2.8.2:deploy (default-deploy) @ java-web-app-with-embedded-tomcat ---
+[INFO] Using alternate deployment repository local-nexus::default::http://nexus/repository/maven-releases/
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  16.575 s
+[INFO] Finished at: 2021-02-04T07:52:06Z
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-deploy-plugin:2.8.2:deploy (default-deploy) on project java-web-app-with-embedded-tomcat: Failed to deploy artifacts: Could not transfer artifact io.github.julianjupiter:java-web-app-with-embedded-tomcat:jar:1.0.1 from/to local-nexus (http://nexus/repository/maven-releases/): Transfer failed for http://nexus/repository/maven-releases/io/github/julianjupiter/java-web-app-with-embedded-tomcat/1.0.1/java-web-app-with-embedded-tomcat-1.0.1.jar 400 Bad Request -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
+[31m
+Pipeline failed on stage 'from-build-pack' : container 'step-build-mvn-deploy'. The execution of the pipeline has stopped.[0m
